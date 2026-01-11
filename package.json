@@ -1,0 +1,61 @@
+{
+  "name": "dhakirni",
+  "icon": "128.png",
+  "displayName": "dhakirni",
+  "description": "a Dhikr Reminder",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.107.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": ["*"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dhakirni.remindNow",
+        "title": "Dhakirni: Dhikr Now"
+      }
+    ],
+    "configuration": {
+      "title": "Dhakirni",
+      "properties": {
+        "dhakirni.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable dhikr reminders"
+        },
+        "dhakirni.intervalMinutes": {
+          "type": "number",
+          "default": 15,
+          "minimum": 5,
+          "description": "Reminder interval in minutes"
+        },
+        "dhakirni.soundEnabled": {
+  "type": "boolean",
+  "default": false,
+  "description": "Play a soft sound with dhikr reminders"
+}
+
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.108.1",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.2"
+  },
+  "dependencies": {
+    "play-sound": "^1.1.6"
+  }
+}
