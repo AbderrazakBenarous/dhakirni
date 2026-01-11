@@ -1,11 +1,16 @@
 {
   "name": "dhakirni",
-  "icon": "128.png",
+  "icon": "128.ico",
   "displayName": "dhakirni",
   "description": "a Dhikr Reminder",
+  "publisher": "AbderrazakBenarous",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.107.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbderrazakBenarous/dhakirni.git"
   },
   "categories": [
     "Other"
